@@ -1,26 +1,98 @@
+/* Estilos gerais */
 body {
     font-family: Arial, sans-serif;
     text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #ffcc00;
     padding: 20px;
 }
 
+h1 {
+    color: white;
+}
+
+/* Listagem dos cupcakes */
 #cupcake-list {
-    margin-top: 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    padding: 20px;
 }
 
 .cupcake-item {
     width: 150px;
-    margin: 10px;
-    border: 1px solid #ddd;
+    object-fit: cover;
+    margin: 15px;
     padding: 10px;
-    text-align: center;
-    background-color: #f4f4f4;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .cupcake-item img {
     max-width: 100%;
     height: auto;
+    border-radius: 8px;
+}
+
+.cupcake-item p {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+button {
+    background-color: #ffcc00;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #e6b800;
+}
+
+/* Carrinho de compras */
+#cart {
+    background-color: #fff;
+    padding: 20px;
+    border-top: 2px solid #ffcc00;
+}
+
+#cart-items {
+    margin-bottom: 10px;
+}
+
+#cart-total {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Formulário de Contato */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form input, form textarea {
+    padding: 10px;
+    margin: 5px;
+    width: 300px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+form button {
+    width: 150px;
+    margin-top: 10px;
 }

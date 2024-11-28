@@ -7,8 +7,37 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Bem-vindo à Loja de Cupcakes!</h1>
-    <div id="cupcake-list"></div> <!-- Aqui irão aparecer os cupcakes -->
+    <header>
+        <h1>Bem-vindo à Loja de Cupcakes!</h1>
+    </header>
+
+    <section id="cupcake-list">
+        <!-- Os cupcakes serão exibidos aqui via JavaScript -->
+    </section>
+
+    <section id="cart">
+        <h2>Carrinho de Compras</h2>
+        <div id="cart-items"></div>
+        <p id="cart-total">Total: R$ 0,00</p>
+        <button id="checkout-btn">Finalizar Compra</button>
+    </section>
+
+    <footer>
+        <h3>Contato</h3>
+        <form id="contact-form">
+            <label for="name">Seu Nome:</label>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="email">Seu E-mail:</label>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="message">Mensagem:</label><br>
+            <textarea id="message" name="message" required></textarea><br><br>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </footer>
+
     <script src="app.js"></script>
 </body>
 </html>
