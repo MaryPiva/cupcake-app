@@ -77,6 +77,38 @@ button:hover {
     font-size: 18px;
     font-weight: bold;
 }
+.cart-feedback {
+    position: fixed;
+    top: 20px;  /* Alinha ao topo da tela */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 128, 0, 0.8);  /* Cor de fundo verde */
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    z-index: 1000; /* Garante que o feedback fique sobre outros elementos */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Sombra para dar destaque */
+    opacity: 0;
+    animation: fadeInOut 2s forwards;  /* Adiciona animação */
+}
+
+/* Animação para o feedback */
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-20px); /* Começa fora da tela */
+    }
+    50% {
+        opacity: 1;  /* Feedback visível */
+        transform: translateX(-50%) translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-20px); /* Desaparece saindo da tela */
+    }
+}
+
 
 /* Formulário de Contato */
 form {
