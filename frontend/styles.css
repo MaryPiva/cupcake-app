@@ -9,13 +9,28 @@ body {
 header {
     background-color: #ffcc00;
     padding: 20px;
+    position: relative;
 }
 
 h1 {
     color: white;
 }
 
-/* Pesquisa e Filtro */
+#user-name {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: white;
+    font-size: 16px;
+}
+
+#login-btn {
+    position: absolute;
+    top: 20px;
+    left: 100px;
+    font-size: 16px;
+}
+
 #search-filter {
     margin: 20px;
 }
@@ -30,7 +45,6 @@ h1 {
     margin-left: 10px;
 }
 
-/* Listagem dos cupcakes */
 #cupcake-list {
     display: flex;
     flex-wrap: wrap;
@@ -74,7 +88,6 @@ button:hover {
     background-color: #e6b800;
 }
 
-/* Ícone do Carrinho no canto direito */
 #cart-icon {
     position: fixed;
     top: 20px;
@@ -102,24 +115,6 @@ button:hover {
     padding: 2px 6px;
 }
 
-/* Ícone de Login no canto esquerdo */
-#login-icon {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    cursor: pointer;
-    background-color: #ffcc00;
-    padding: 10px;
-    border-radius: 50%;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-}
-
-#login-icon img {
-    width: 40px;
-    height: 40px;
-}
-
-/* Página do Carrinho */
 #cart-page {
     background-color: #fff;
     padding: 20px;
@@ -151,7 +146,6 @@ button:hover {
     background-color: #999;
 }
 
-/* Página de Cadastro */
 #signup-page {
     background-color: #fff;
     padding: 20px;
@@ -177,4 +171,34 @@ form input, form textarea {
 form button {
     width: 150px;
     margin-top: 10px;
+}
+
+#login-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+
+#login-modal-content {
+    background-color: #fff;
+    padding: 20px;
+    width: 300px;
+    margin: 100px auto;
+    border-radius: 8px;
+    text-align: center;
+}
+
+#logout-btn {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: #ffcc00;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
 }
