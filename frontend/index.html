@@ -11,10 +11,22 @@
         <h1>Bem-vindo à Loja de Cupcakes!</h1>
     </header>
 
+    <!-- Barra de Pesquisa e Filtro -->
+    <section id="search-filter">
+        <input type="text" id="search" placeholder="Pesquisar Cupcakes" onkeyup="searchCupcakes()">
+        <select id="category-filter" onchange="filterByCategory()">
+            <option value="all">Todas</option>
+            <option value="baunilha">Baunilha</option>
+            <option value="chocolate">Chocolate</option>
+        </select>
+    </section>
+
+    <!-- Exibição de Cupcakes -->
     <section id="cupcake-list">
         <!-- Os cupcakes serão exibidos aqui via JavaScript -->
     </section>
 
+    <!-- Carrinho de Compras -->
     <section id="cart">
         <h2>Carrinho de Compras</h2>
         <div id="cart-items"></div>
@@ -22,6 +34,7 @@
         <button id="checkout-btn">Finalizar Compra</button>
     </section>
 
+    <!-- Formulário de Contato -->
     <footer>
         <h3>Contato</h3>
         <form id="contact-form">
@@ -37,6 +50,34 @@
             <button type="submit">Enviar</button>
         </form>
     </footer>
+
+    <!-- Formulário de Login -->
+    <section id="login-form-section">
+        <h3>Login</h3>
+        <form id="login-form">
+            <label for="username">Usuário:</label>
+            <input type="text" id="username" name="username" required><br><br>
+
+            <label for="password">Senha:</label>
+            <input type="password" id="password" name="password" required><br><br>
+
+            <button type="submit">Entrar</button>
+        </form>
+    </section>
+
+    <!-- Formulário de Cadastro -->
+    <section id="signup-form-section">
+        <h3>Criar Conta</h3>
+        <form id="signup-form">
+            <label for="new-username">Novo Usuário:</label>
+            <input type="text" id="new-username" name="new-username" required><br><br>
+
+            <label for="new-password">Nova Senha:</label>
+            <input type="password" id="new-password" name="new-password" required><br><br>
+
+            <button type="submit">Criar Conta</button>
+        </form>
+    </section>
 
     <script src="app.js"></script>
 </body>
