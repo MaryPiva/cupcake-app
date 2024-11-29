@@ -1,4 +1,3 @@
-/* Estilos gerais */
 body {
     font-family: Arial, sans-serif;
     text-align: center;
@@ -7,7 +6,6 @@ body {
     background-color: #f9f9f9;
 }
 
-/* Cabeçalho */
 header {
     background-color: #ffcc00;
     padding: 20px;
@@ -15,6 +13,21 @@ header {
 
 h1 {
     color: white;
+}
+
+/* Pesquisa e Filtro */
+#search-filter {
+    margin: 20px;
+}
+
+#search {
+    padding: 10px;
+    width: 250px;
+}
+
+#category-filter {
+    padding: 10px;
+    margin-left: 10px;
 }
 
 /* Listagem dos cupcakes */
@@ -27,7 +40,6 @@ h1 {
 
 .cupcake-item {
     width: 150px;
-   
     margin: 15px;
     padding: 10px;
     background-color: #fff;
@@ -37,7 +49,7 @@ h1 {
 }
 
 .cupcake-item img {
-    max-width: 150px%;
+    width: 100%;
     height: 150px;
     object-fit: cover;
     border-radius: 8px;
@@ -77,44 +89,13 @@ button:hover {
     font-size: 18px;
     font-weight: bold;
 }
-.cart-feedback {
-    position: fixed;
-    top: 20px;  /* Alinha ao topo da tela */
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: rgba(0, 128, 0, 0.8);  /* Cor de fundo verde */
-    color: white;
-    padding: 10px;
-    border-radius: 5px;
-    font-size: 16px;
-    z-index: 1000; /* Garante que o feedback fique sobre outros elementos */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Sombra para dar destaque */
-    opacity: 0;
-    animation: fadeInOut 2s forwards;  /* Adiciona animação */
-}
 
-/* Animação para o feedback */
-@keyframes fadeInOut {
-    0% {
-        opacity: 0;
-        transform: translateX(-50%) translateY(-20px); /* Começa fora da tela */
-    }
-    50% {
-        opacity: 1;  /* Feedback visível */
-        transform: translateX(-50%) translateY(0);
-    }
-    100% {
-        opacity: 0;
-        transform: translateX(-50%) translateY(-20px); /* Desaparece saindo da tela */
-    }
-}
-
-
-/* Formulário de Contato */
+/* Formulário de Contato e Login */
 form {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 20px;
 }
 
 form input, form textarea {
@@ -129,3 +110,36 @@ form button {
     width: 150px;
     margin-top: 10px;
 }
+
+/* Feedback */
+.cart-feedback {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 128, 0, 0.8);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    animation: fadeInOut 2s forwards;
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-20px);
+    }
+    50% {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-20px);
+    }
+}
+
