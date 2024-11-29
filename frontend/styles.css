@@ -102,6 +102,23 @@ button:hover {
     padding: 2px 6px;
 }
 
+/* Ícone de Login no canto esquerdo */
+#login-icon {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+    background-color: #ffcc00;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+#login-icon img {
+    width: 40px;
+    height: 40px;
+}
+
 /* Página do Carrinho */
 #cart-page {
     background-color: #fff;
@@ -134,7 +151,14 @@ button:hover {
     background-color: #999;
 }
 
-/* Formulário de Contato */
+/* Página de Cadastro */
+#signup-page {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px;
+}
+
 form {
     display: flex;
     flex-direction: column;
@@ -153,36 +177,4 @@ form input, form textarea {
 form button {
     width: 150px;
     margin-top: 10px;
-}
-
-/* Feedback */
-.cart-feedback {
-    position: fixed;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: rgba(0, 128, 0, 0.8);
-    color: white;
-    padding: 10px;
-    border-radius: 5px;
-    font-size: 16px;
-    z-index: 1000;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    opacity: 0;
-    animation: fadeInOut 2s forwards;
-}
-
-@keyframes fadeInOut {
-    0% {
-        opacity: 0;
-        transform: translateX(-50%) translateY(-20px);
-    }
-    50% {
-        opacity: 1;
-        transform: translateX(-50%) translateY(0);
-    }
-    100% {
-        opacity: 0;
-        transform: translateX(-50%) translateY(-20px);
-    }
 }
