@@ -62,6 +62,8 @@ document.addEventListener('DOMContentLoaded', function() {
             const itemElement = document.createElement('div');
             itemElement.innerHTML = `
                 ${item.name} - R$ ${item.price.toFixed(2)} x ${item.quantity}
+                <button class="remove-item" data-id="${item.id}">Remover</button>
+                <button class="decrease-item" data-id="${item.id}">Diminuir Quantidade</button>
             `;
             cartItems.appendChild(itemElement);
             total += item.price * item.quantity;
@@ -78,6 +80,58 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('close-cart').addEventListener('click', function() {
         const cartPage = document.getElementById('cart-page');
         cartPage.style.display = 'none';
+    });
+
+    // Remover item do carrinho
+    document.getElementById('cart-items').addEventListener('click', function(event) {
+        if (event.target.classList.contains('remove-item')) {
+            const cupcakeId = parseInt(event.target.dataset.id);
+            // Remover o cupcake do carrinho
+            cart = cart.filter(item => item.id !== cupcakeId);
+            updateCart(); // Atualiza o carrinho
+        }
+    });
+
+    // Diminuir quantidade de um item no carrinho
+    document.getElementById('cart-items').addEventListener('click', function(event) {
+        if (event.target.classList.contains('decrease-item')) {
+            const cupcakeId = parseInt(event.target.dataset.id);
+            const cupcake = cart.find(item => item.id === cupcakeId);
+            if (cupcake && cupcake.quantity > 1) {
+                cupcake.quantity -= 1;
+            } else {
+                // Se a quantidade for 1, remove o item
+                cart = cart.filter(item => item.id !== cupcakeId);
+            }
+            updateCart(); // Atualiza o carrinho
+        }
+    });
+
+    // Atualizar carrinho no LocalStorage
+    function updateCart() {
+        localStorage.setItem('cart', JSON.stringify(cart));
+        updateCartIcon();
+        displayCartPage(); // Exibe o carrinho atualizado
+    }
+
+    // Finalizar compra e redirecionar para o cadastro
+    document.getElementById('checkout-btn').addEventListener('click', function() {
+        if (cart.length > 0) {
+            document.getElementById('cart-page').style.display = 'none';  // Esconde o carrinho
+            document.getElementById('signup-page').style.display = 'block';  // Exibe a página de cadastro
+        } else {
+            alert('Carrinho vazio!');
+        }
+    });
+
+    // Página de Cadastro
+    document.getElementById('signup-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        const newUsername = document.getElementById('new-username').value;
+        const newPassword = document.getElementById('new-password').value;
+
+        alert(`Conta criada com sucesso! Bem-vindo, ${newUsername}`);
+        document.getElementById('signup-page').style.display = 'none';  // Esconde a página de cadastro
     });
 
     // Atualizar o carrinho no ícone sempre que a página for carregada
