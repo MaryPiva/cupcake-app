@@ -74,23 +74,67 @@ button:hover {
     background-color: #e6b800;
 }
 
-/* Carrinho de compras */
-#cart {
+/* Ícone do Carrinho no canto direito */
+#cart-icon {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    background-color: #ffcc00;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+#cart-icon img {
+    width: 40px;
+    height: 40px;
+}
+
+#cart-icon-count {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: red;
+    color: white;
+    font-size: 14px;
+    border-radius: 50%;
+    padding: 2px 6px;
+}
+
+/* Página do Carrinho */
+#cart-page {
     background-color: #fff;
     padding: 20px;
-    border-top: 2px solid #ffcc00;
+    margin: 20px;
+    border-radius: 8px;
 }
 
-#cart-items {
-    margin-bottom: 10px;
+#cart-page #checkout-btn {
+    background-color: #ffcc00;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
 }
 
-#cart-total {
-    font-size: 18px;
-    font-weight: bold;
+#cart-page #checkout-btn:hover {
+    background-color: #e6b800;
 }
 
-/* Formulário de Contato e Login */
+#cart-page #close-cart {
+    background-color: #ccc;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#cart-page #close-cart:hover {
+    background-color: #999;
+}
+
+/* Formulário de Contato */
 form {
     display: flex;
     flex-direction: column;
@@ -142,4 +186,3 @@ form button {
         transform: translateX(-50%) translateY(-20px);
     }
 }
-
