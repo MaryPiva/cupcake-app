@@ -1,65 +1,107 @@
+/* Estilos Gerais */
 body {
     font-family: Arial, sans-serif;
-    text-align: center;
+    background-color: #f9f9f9;
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
+    text-align: center;
 }
 
+/* Header */
 header {
     background-color: #ffcc00;
-    padding: 20px;
+    padding: 70px;
     position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-h1 {
-    color: white;
-}
-
-#user-name {
+header #user-name {
     position: absolute;
     top: 20px;
     left: 20px;
+    font-size: 18px;
     color: white;
-    font-size: 16px;
 }
 
-#login-btn {
+header #login-btn {
     position: absolute;
     top: 20px;
-    left: 100px;
-    font-size: 16px;
+    left: 20px;
+  
+}
+#logout-btn {
+    position: fixed; /* Fixa o botão na tela */
+    bottom: 20px; /* Distância de 20px do fundo da tela */
+    left: 20px; /* Distância de 20px da lateral esquerda */
+    padding: 10px 20px; /* Tamanho do botão */
+    background-color: #f44336; /* Cor de fundo do botão */
+    color: white; /* Cor do texto */
+    border: none; /* Retira a borda do botão */
+    border-radius: 5px; /* Borda arredondada */
+    font-size: 16px; /* Tamanho da fonte */
+    cursor: pointer; /* Mostra o ponteiro de clique */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para dar destaque */
+    z-index: 1000; /* Garante que o botão fique sobre outros elementos */
 }
 
-#search-filter {
+#logout-btn:hover {
+    background-color: #d32f2f; /* Cor de fundo ao passar o mouse */
+}
+
+
+header #cart-icon {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #ffcc00;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+header #cart-icon-count {
+    position: absolute;
+    display: none;
+    top: -5px;
+    right: -5px;
+    font-size: 14px;
+    border-radius: 50%;
+    padding: 2px 6px;
+}
+
+/* Filtros e Pesquisa */
+#filters {
     margin: 20px;
 }
 
-#search {
+#filters input,
+#filters select {
     padding: 10px;
-    width: 250px;
+    font-size: 16px;
+    margin: 10px 5px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
 }
 
-#category-filter {
-    padding: 10px;
-    margin-left: 10px;
-}
-
+/* Lista de Cupcakes */
 #cupcake-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 20px;
     padding: 20px;
 }
 
 .cupcake-item {
     width: 150px;
-    margin: 15px;
+    background-color: white;
     padding: 10px;
-    background-color: #fff;
-    border: 1px solid #ddd;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-size: 16px;
 }
 
 .cupcake-item img {
@@ -69,136 +111,213 @@ h1 {
     border-radius: 8px;
 }
 
-.cupcake-item p {
-    font-size: 16px;
-    font-weight: bold;
-    color: #333;
-}
-
-button {
+.cupcake-item button {
     background-color: #ffcc00;
     border: none;
-    padding: 10px 20px;
+    padding: 10px;
     cursor: pointer;
     border-radius: 4px;
     font-size: 16px;
+    margin-top: 10px;
 }
 
-button:hover {
+.cupcake-item button:hover {
     background-color: #e6b800;
 }
 
-#cart-icon {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    cursor: pointer;
-    background-color: #ffcc00;
-    padding: 10px;
-    border-radius: 50%;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-}
-
-#cart-icon img {
-    width: 40px;
-    height: 40px;
-}
-
-#cart-icon-count {
-    position: absolute;
-    top: -5px;
-    right: -5px;
-    background-color: red;
-    color: white;
-    font-size: 14px;
-    border-radius: 50%;
-    padding: 2px 6px;
-}
-
+/* Carrinho de Compras */
 #cart-page {
     background-color: #fff;
     padding: 20px;
     margin: 20px;
     border-radius: 8px;
-}
-
-#cart-page #checkout-btn {
-    background-color: #ffcc00;
-    padding: 10px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-#cart-page #checkout-btn:hover {
-    background-color: #e6b800;
-}
-
-#cart-page #close-cart {
-    background-color: #ccc;
-    padding: 10px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-#cart-page #close-cart:hover {
-    background-color: #999;
-}
-
-#signup-page {
-    background-color: #fff;
-    padding: 20px;
-    margin: 20px;
-    border-radius: 8px;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-}
-
-form input, form textarea {
-    padding: 10px;
-    margin: 5px;
-    width: 300px;
-    border-radius: 4px;
-    border: 1px solid #ddd;
-}
-
-form button {
-    width: 150px;
-    margin-top: 10px;
-}
-
-#login-modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: none;
 }
 
-#login-modal-content {
-    background-color: #fff;
-    padding: 20px;
-    width: 300px;
-    margin: 100px auto;
-    border-radius: 8px;
-    text-align: center;
+#cart-items {
+    margin-bottom: 20px;
 }
 
-#logout-btn {
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
+#cart-total {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#checkout-btn {
     background-color: #ffcc00;
     padding: 10px 20px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    font-size: 16px;
+}
+
+#checkout-btn:hover {
+    background-color: #e6b800;
+}
+
+#cart-page button {
+    background-color: #ccc;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#cart-page button:hover {
+    background-color: #999;
+}
+
+/* Modais */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Fundo escuro */
+    overflow: auto;
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal .close {
+    color: black;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 125px;
+    right: 700px;
+}
+
+.modal .close:hover,
+.modal .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Formulários dentro dos modais */
+.modal input,
+.modal button {
+    padding: 5px;
+    font-size: 16px;
+    width: 100%;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+.modal button {
+    background-color: #ffcc00;
+    border: none;
+    cursor: pointer;
+}
+
+.modal button:hover {
+    background-color: #e6b800;
+}
+
+.modal p {
+    font-size: 14px;
+}
+
+.modal a {
+    color: #ffcc00;
+}
+
+/* Toast (Mensagem de Sucesso) */
+#toast {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transition: opacity 0.5s ease, top 0.5s ease;
+}
+
+#toast.show {
+    opacity: 1;
+    top: 30px;
+}
+/* Estilos do Modal de Feedback */
+#feedback-modal {
+    display: none; /* Inicialmente oculto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Fundo escuro */
+    overflow: auto;
+    padding-top: 60px;
+}
+
+#feedback-modal .modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 40px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#feedback-modal .close {
+    color:black;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 125px;
+    right: 700px;
+}
+
+#feedback-modal .close:hover,
+#feedback-modal .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#feedback-modal form {
+    display: flex;
+    flex-direction: column;
+}
+
+#feedback-modal input,
+#feedback-modal textarea,
+#feedback-modal button {
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+#feedback-modal button {
+    background-color: #ffcc00;
+    cursor: pointer;
+}
+
+#feedback-modal button:hover {
+    background-color: #e6b800;
 }
