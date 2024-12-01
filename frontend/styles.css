@@ -30,18 +30,18 @@ header #login-btn {
   
 }
 #logout-btn {
-    position: fixed; /* Fixa o botão na tela */
-    bottom: 20px; /* Distância de 20px do fundo da tela */
-    left: 20px; /* Distância de 20px da lateral esquerda */
-    padding: 10px 20px; /* Tamanho do botão */
-    background-color: #f44336; /* Cor de fundo do botão */
-    color: white; /* Cor do texto */
-    border: none; /* Retira a borda do botão */
-    border-radius: 5px; /* Borda arredondada */
-    font-size: 16px; /* Tamanho da fonte */
-    cursor: pointer; /* Mostra o ponteiro de clique */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para dar destaque */
-    z-index: 1000; /* Garante que o botão fique sobre outros elementos */
+    position: fixed; 
+    bottom: 20px;
+    left: 20px; 
+    padding: 10px 20px;
+    background-color: #f44336; 
+    color: white; 
+    border: none; 
+    border-radius: 5px;
+    font-size: 16px; 
+    cursor: pointer; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    z-index: 1000; 
 }
 
 #logout-btn:hover {

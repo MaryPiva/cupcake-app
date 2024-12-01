@@ -12,10 +12,3 @@ Esta aplicação web permite que você navegue por diferentes tipos de cupcakes,
 - **Cadastro e Login de Usuário**: Realize o cadastro e login para acessar a experiência personalizada.
 
 
-## Demonstração
-
-Você pode ver o funcionamento da aplicação assistindo ao vídeo abaixo:
-
-[![Veja a demonstração da loja de cupcakes]()
-
-
