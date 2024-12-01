@@ -22,10 +22,9 @@ db.serialize(() => {
 
     // Inserir cupcakes de exemplo
     const stmt = db.prepare("INSERT INTO Cupcakes (nome, preco) VALUES (?, ?)");
-    stmt.run("Cupcake de Chocolate", 10.00);
-    stmt.run("Cupcake de Morango", 12.00);
-    stmt.run("Cupcake de Baunilha", 8.00);
-    stmt.run("Cupcake de Limão", 9.50);
+    stmt.run("Cupcake de Chocolate", 6.00);
+    stmt.run("Cupcake de Morango", 7.00);
+    stmt.run("Cupcake de Baunilha", 5.00);
     stmt.finalize();
 });
 
