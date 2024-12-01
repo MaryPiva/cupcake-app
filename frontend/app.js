@@ -1,4 +1,4 @@
-// Armazenamento de usuários (fake database)
+// Armazenamento de usuários 
 const users = JSON.parse(localStorage.getItem('users')) || [];
 
 // Definição dos cupcakes com preço, imagem e categoria
